@@ -1,0 +1,82 @@
+The Report about the Homework 2
+
+Thisn report includes two parts,the first part is about the result about the java code, and the second part is the analysis about the outcome of the algorithm.
+
+--------------------The outcome of Naive Bayes ------------------------
+
+The accuracy of Naive Bayes with stopwords: 0.9476987447698745
+The accuracy of Naive Bayes without stopwords: 0.9435146443514645
+Time consumption(s): 1.604259786
+
+--------------------The outcome of Logistic Regression------------------
+
+1.The first result data
+Learning rate:0.01; lambda:0.2; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.8786610878661087
+The accuracy of Logistic Regression without stopwords: 0.9205020920502092
+Time consumption(s): 1.7512059240000002
+
+2.The second result data
+Learning rate:0.01; lambda:0.36; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9539748953974896
+The accuracy of Logistic Regression without stopwords: 0.9560669456066946
+Time consumption(s): 1.782503455
+
+3.The third result data
+Learning rate:0.01; lambda:0.37; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9560669456066946
+The accuracy of Logistic Regression without stopwords: 0.9497907949790795
+Time consumption(s): 1.782503455
+
+4.The forth result data
+Learning rate:0.01; lambda:0.345; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9539748953974896
+The accuracy of Logistic Regression without stopwords: 0.9581589958158996
+Time consumption(s): 1.791940279
+
+5.The fifth result data
+Learning rate:0.01; lambda:0.347; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9560669456066946
+The accuracy of Logistic Regression without stopwords: 0.9581589958158996
+Time consumption(s): 1.7289671450000001
+
+6.The sixth result data
+Learning rate:0.01; lambda:0.354; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9560669456066946
+The accuracy of Logistic Regression without stopwords: 0.9581589958158996
+Time consumption(s): 1.77762524
+
+7.The seventh result data
+Learning rate:0.01; lambda:0.357; number of times about interation: 200
+The accuracy of Logistic Regression with stopwords: 0.9560669456066946
+The accuracy of Logistic Regression without stopwords: 0.9560669456066946
+Time consumption(s): 1.7525562430000001
+
+---------------------The interpretation of the result-------------------
+part1: for Naive Bayesian
+We can see for the Naive Bayesian, the accuracy of the algorithm will decline after add the stop words,
+this because of the overfitting. 
+The reason about the overfitting is caused by: 
+1: we learned two many parameters for the Naive Bayesian, two many parameters will always cause the overfitting;
+2: unlike the logistic regression, there is no regularization for the Naive Bayesian, we know that the regularization can avoid the overfitting, but the Naive Bayesian only has the prior probability for the algorithm. If the number of the training sample is very large, the prior probability is not that important;
+it will be very important if the number of the training sample is very small.
+
+------------------------------------------------------------------------
+
+part2: for Logistic Regression
+
+We can see for the Logistic Regression, the accuracy of the algorithm will rise after add the stop words,
+this because of the overfitting. And compare to the Naive Bayesian, if we set appropriate value for the parameters, the result of the Logistic Regression is better than Naive Bayesian. Meanwhile, if we set some improper values for the parameters, the result of the Logistic Regression will be worse than the Naive Bayesian.
+
+The reason is that:
+We will learn too many small weights for the algorithms, under this sitiation, using the regularization can avoid the overfitting, because it just like add a penalty for some weights.
+
+The reason that the accuracy will rise after using the stop words is that:
+We know the stop words are those words that contain only a few or no information about the content of the text.
+If we delete the stop words, it will increase our efficiency of the algorithm, and also leave the words that contain the information of the context, so it will be helpful for our classification.
+
+Finally, we can see that the weight of the Logistic will converge after some times of iteration if the value of the parameters are proper.  
+
+
+
+
